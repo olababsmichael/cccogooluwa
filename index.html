@@ -8,6 +8,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body class="bg-[#F8F9FA] text-[#1F2937] selection:bg-[#D4AF37] selection:text-white">
 
@@ -18,7 +19,7 @@
             <div class="flex items-center gap-3">
                 <!-- <div class="w-10 h-10 bg-[#1E3A8A]/10 rounded-full flex items-center justify-center border border-[#1E3A8A]/10">
                     <!-- <i data-lucide="cross" class="text-[#1E3A8A] w-6 h-6"></i> --
-                     <img src="ccclogo.PNG" alt="CCC Logo">
+                     <img src="ccclogo.png" alt="CCC Logo">
                 </div> -->
                 <div class="w-10 h-10 bg-[#1E3A8A]/10 rounded-full flex items-center justify-center border border-[#1E3A8A]/10">
     <img src="ccclogo.PNG" alt="CCC Logo" class="w-8 h-8 object-contain">
@@ -191,25 +192,63 @@
     <section id="community" class="py-24 px-6 bg-[#F8F9FA] scroll-mt-20">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
             <div>
-                <span class="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Community & Impact</span>
-                <h2 class="serif italic text-5xl mb-12">Miracles & <br>Giving</h2>
+                <span class="text-[#D4AF37] text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Scripture & Inspiration</span>
+                <h2 class="serif italic text-5xl mb-12">God’s Word <br> in Action</h2>
                 
                 <div class="space-y-6 mb-12">
                     <div class="glass p-6 rounded-2xl border-l-4 border-[#D4AF37] italic font-light text-gray-500 text-sm">
-                        "After years of waiting, the Lord blessed my family with a miracle child through the prayers at this parish."
-                        <div class="mt-2 not-italic font-bold text-[#1F2937] text-xs">— Sister Deborah</div>
+                        "The Lord is my shepherd; I shall not want."
+                        <div class="mt-2 not-italic font-bold text-[#1F2937] text-xs">— Psalm 23:1</div>
                     </div>
                     <div class="glass p-6 rounded-2xl border-l-4 border-[#D4AF37] italic font-light text-gray-500 text-sm">
-                        "I was healed from a chronic illness during the Friday Powerline service. Glory be to God!"
-                        <div class="mt-2 not-italic font-bold text-[#1F2937] text-xs">— Brother Samuel</div>
+                        For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future."
+                        <div class="mt-2 not-italic font-bold text-[#1F2937] text-xs">— Jeremiah 29:11</div>
                     </div>
                 </div>
 
-                <div class="p-8 bg-[#1E3A8A] rounded-[2rem] text-white shadow-xl relative overflow-hidden">
+                <!-- <div class="p-8 bg-[#1E3A8A] rounded-[2rem] text-white shadow-xl relative overflow-hidden">
                     <h3 class="text-2xl serif italic mb-4">Support the Mission</h3>
                     <p class="text-sm text-blue-100 font-light mb-6">Your generosity enables us to spread the Gospel and support our community.</p>
                     <button class="w-full py-4 bg-[#D4AF37] text-white font-bold uppercase tracking-widest rounded-xl hover:bg-white hover:text-[#1E3A8A] transition-all">Give Now</button>
-                </div>
+                </div> -->
+               <div id="donation-card" class="p-8 bg-[#1E3A8A] rounded-[2rem] text-white shadow-xl relative overflow-hidden transition-all">
+    <h3 id="donation-title" class="text-2xl serif italic mb-4">Support the Mission</h3>
+    
+    <!-- This container will hold our text or the new nested card -->
+    <div id="donation-content">
+        <p id="donation-text" class="text-sm text-blue-100 font-light mb-6">
+            Your generosity enables us to spread the Gospel and support our community.
+        </p>
+    </div>
+
+    <button id="give-now-btn" class="w-full py-4 bg-[#D4AF37] text-white font-bold uppercase tracking-widest rounded-xl hover:bg-white hover:text-[#1E3A8A] transition-all">
+        Give Now
+    </button>
+</div>
+
+<script>
+document.getElementById("give-now-btn").addEventListener("click", function() {
+    // 1. Update the Title
+    document.getElementById("donation-title").innerText = "Bank Details";
+
+    // 2. Insert the nested card into the content area
+    const contentArea = document.getElementById("donation-content");
+    contentArea.innerHTML = `
+        <div class="bg-white/10 border border-white/20 rounded-xl p-5 mb-6 backdrop-blur-sm">
+            <p class="text-xs uppercase tracking-widest text-blue-200 mb-2">Account Information</p>
+            <div class="space-y-2 text-sm md:text-base">
+                <p><strong>Bank:</strong> First City Monument Bank (FCMB)</p>
+                <p><strong>Name:</strong> C.C.C. Ogo Oluwa Parish Mowe</p>
+                <p class="text-lg font-mono tracking-wider text-[#D4AF37]">1034848951</p>
+            </div>
+            <p class="mt-4 text-xs italic text-blue-200">Please include your name as reference.</p>
+        </div>
+    `;
+
+    // 3. Hide the button
+    this.style.display = "none";
+});
+</script>
             </div>
             <div class="relative">
                 <img src="OLUSO.jpeg" class="aspect-square rounded-[3rem] object-cover border-8 border-white shadow-2xl">
@@ -232,7 +271,7 @@
                             <div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-[#1E3A8A]"><i data-lucide="map-pin"></i></div>
                             <div>
                                 <h4 class="font-bold mb-1">Address</h4>
-                                <p class="text-gray-400 text-sm">CCC Ogo Oluwa Parish, <br>31, Imedu Olori Road, Mowe, Ogun State, Nigeria</p>
+                                <p class="text-gray-400 text-sm">CCC Ogo Oluwa Parish, <br>31, Imedu Olori Road, Mowe, <br> Ogun State, Nigeria</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-6">
@@ -246,13 +285,13 @@
                             <div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-[#1E3A8A]"><i data-lucide="mail"></i></div>
                             <div>
                                 <h4 class="font-bold mb-1">Email</h4>
-                                <p class="text-gray-400 text-sm">cccogooluwaparish@gmail.ccom</p>
+                                <p class="text-gray-400 text-sm">example@gmail.com</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white p-10 rounded-3xl shadow-xl border border-blue-50">
+                <!-- <div class="bg-white p-10 rounded-3xl shadow-xl border border-blue-50">
                     <form class="space-y-6">
                         <div class="grid md:grid-cols-2 gap-6">
                             <div class="space-y-2">
@@ -270,7 +309,7 @@
                         </div>
                         <button class="w-full py-4 bg-[#1E3A8A] text-white font-bold uppercase tracking-widest rounded-xl hover:bg-[#1F2937] transition-all shadow-lg">Send Message</button>
                     </form>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
