@@ -150,3 +150,8 @@ body { font-family: "Inter", sans-serif; }
 .social-btn:active {
     transform: scale(0.9);
 }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
