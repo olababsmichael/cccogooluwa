@@ -155,3 +155,21 @@ html, body {
     overflow-x: hidden;
     position: relative;
 }
+/* 1. Hide the menu by default and move it off-screen to the right */
+#mobile-menu {
+    transform: translateX(100%); 
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 90; /* Sits below the toggle button (100) but above everything else */
+    visibility: hidden; /* Prevents clicking links while menu is closed */
+}
+
+/* 2. When JS adds the .active class, slide it in */
+#mobile-menu.active {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+/* 3. Ensure the toggle button is ALWAYS clickable and on top */
+#mobile-toggle {
+    z-index: 100 !important;
+}

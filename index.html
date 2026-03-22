@@ -15,29 +15,45 @@
     <div class="atmosphere"></div>
 
     <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 py-8 px-6">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <!-- <div class="w-10 h-10 bg-[#1E3A8A]/10 rounded-full flex items-center justify-center border border-[#1E3A8A]/10">
-                    <!-- <i data-lucide="cross" class="text-[#1E3A8A] w-6 h-6"></i> --
-                     <img src="ccclogo.png" alt="CCC Logo">
-                </div> -->
-                <div class="w-10 h-10 bg-[#1E3A8A]/10 rounded-full flex items-center justify-center border border-[#1E3A8A]/10">
-    <img src="ccclogo.png" alt="CCC Logo" class="w-8 h-8 object-contain">
-</div>
-                <div>
-                    <h1 class="text-xl font-bold tracking-tighter leading-none">CCC Ogo Oluwa Parish</h1>
-                    <span class="text-[10px] uppercase tracking-[0.2em] text-gray-500">Celestial Church of Christ</span>
-                </div>
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-[#1E3A8A]/10 rounded-full flex items-center justify-center border border-[#1E3A8A]/10">
+                <img src="ccclogo.png" alt="CCC Logo" class="w-8 h-8 object-contain">
             </div>
-            <div class="hidden md:flex items-center gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-500">
-                <a href="#home" class="hover:text-[#1E3A8A]">Home</a>
-                <a href="#mission" class="hover:text-[#1E3A8A]">Mission</a>
-                <a href="#spiritual" class="hover:text-[#1E3A8A]">Spiritual</a>
-                <a href="#community" class="hover:text-[#1E3A8A]">Community</a>
-                <button class="px-6 py-2 bg-[#1E3A8A] text-white rounded-full shadow-lg shadow-blue-900/20 hover:bg-[#1F2937] transition-all">JOIN US</button>
+            <div>
+                <h1 class="text-xl font-bold tracking-tighter leading-none">CCC Ogo Oluwa Parish</h1>
+                <span class="text-[10px] uppercase tracking-[0.2em] text-gray-500">Celestial Church of Christ</span>
             </div>
         </div>
-    </nav>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-500">
+            <a href="#home" class="hover:text-[#1E3A8A]">Home</a>
+            <a href="#mission" class="hover:text-[#1E3A8A]">Mission</a>
+            <a href="#spiritual" class="hover:text-[#1E3A8A]">Spiritual</a>
+            <a href="#community" class="hover:text-[#1E3A8A]">Community</a>
+            <button class="px-6 py-2 bg-[#1E3A8A] text-white rounded-full shadow-lg shadow-blue-900/20 hover:bg-[#1F2937] transition-all">JOIN US</button>
+        </div>
+
+        <!-- MOBILE TOGGLE BUTTON (Added this) -->
+        <button id="mobile-toggle" class="md:hidden text-[#1E3A8A] p-2 z-[100] relative">
+            <i data-lucide="menu" id="toggle-icon" class="w-6 h-6"></i>
+        </button>
+    </div>
+</nav>
+
+<!-- MOBILE MENU OVERLAY (Added this right after </nav>) -->
+<div id="mobile-menu" class="fixed inset-0 bg-white flex flex-col items-center justify-center gap-8 md:hidden">
+    <a href="#home" class="mobile-nav-link text-2xl font-bold uppercase tracking-widest text-[#1E3A8A]">Home</a>
+    <a href="#mission" class="mobile-nav-link text-2xl font-bold uppercase tracking-widest text-[#1E3A8A]">Mission</a>
+    <a href="#spiritual" class="mobile-nav-link text-2xl font-bold uppercase tracking-widest text-[#1E3A8A]">Spiritual</a>
+    <a href="#community" class="mobile-nav-link text-2xl font-bold uppercase tracking-widest text-[#1E3A8A]">Community</a>
+    <a href="https://wa.me/2348060013669?text=Hello!%20I%20would%20like%20to%20join%20CCC%20Ogo%20Oluwa%20Parish." 
+   target="_blank" 
+   class="px-6 py-2 bg-[#1E3A8A] text-white rounded-full shadow-lg shadow-blue-900/20 hover:bg-[#1F2937] transition-all inline-block text-center">
+   JOIN US
+</a>
+</div>
 
     <section id="home" class="relative h-screen flex items-center justify-center text-center px-6 pt-20">
         <div class="relative z-10 max-w-4xl">
