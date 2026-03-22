@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,500&family=Inter:wght@300;400;700;900&display=swap');
+
+.serif { font-family: "Cormorant Garamond", serif; }
+body { font-family: "Inter", sans-serif; }
+
+/* The "Spiritual" Background */
+.atmosphere {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: 
+        radial-gradient(circle at 50% -10%, rgba(30, 58, 138, 0.08) 0%, transparent 70%),
+        radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+    filter: blur(40px);
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #1E3A8A, #D4AF37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(30, 58, 138, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.nav-glass {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px);
+    padding: 1rem 1.5rem !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.belief-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+}
+/* Updated Hover Effects */
+.belief-card, .glass {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(30, 58, 138, 0.05); /* Very subtle default border */
+}
+
+/* The exact AI shadow: deep blue glow that lifts the card */
+.belief-card:hover, .glass:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 175, 55, 0.1); /* Very faint gold, not a solid line */
+    box-shadow: 0 20px 40px rgba(30, 58, 138, 0.12); /* Spiritual blue shadow */
+    background: white; /* Ensures it pops against the background */
+}
+
+/* Ensure the glass card inside the image also transitions smoothly */
+.glass {
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.8);
+}
+/* Remove all solid gold left borders on interactive cards */
+.glass, .belief-card {
+    border-left: 0 !important; /* Forces removal of the gold bar */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(30, 58, 138, 0.05);
+}
+
+/* The "AI Highlight" Shadow - Applied to Services, Events, and Beliefs */
+.glass:hover, .belief-card:hover {
+    transform: translateY(-8px);
+    background: white;
+    border-color: rgba(30, 58, 138, 0.1);
+    box-shadow: 0 25px 50px rgba(30, 58, 138, 0.15); /* The deep spiritual glow */
+}
+
+/* Optional: Keep a very subtle gold hint only on the icon to represent the 'Glory' */
+.glass:hover i {
+    color: #D4AF37;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+/* Minimalist AI Theme - No Gold Accents */
+:root {
+    --accent-blue: #1E3A8A;
+    --soft-glow: rgba(30, 58, 138, 0.12);
+}
+
+/* Global Card Reset */
+.glass, .belief-card, .event-card {
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    border-left: none !important; /* Explicitly removes the gold bar */
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+/* The AI Hover: Elevation + Soft Shadow (No Gold) */
+.glass:hover, .belief-card:hover, .event-card:hover {
+    transform: translateY(-6px);
+    background: #FFFFFF;
+    box-shadow: 0 20px 40px var(--soft-glow);
+    border-color: rgba(30, 58, 138, 0.1) !important;
+}
+
+/* Event Date Badge - Clean & Professional */
+.date-badge {
+    background: #F1F5F9;
+    padding: 1rem;
+    border-radius: 1rem;
+    min-width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.event-card:hover .date-badge {
+    background: var(--accent-blue);
+}
+
+.event-card:hover .date-badge span, 
+.event-card:hover .date-badge p {
+    color: white;
+}
+/* AI Social Button Styling */
+.social-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+}
+
+.social-btn:hover {
+    background: #FFFFFF;
+    color: #1E3A8A; /* Shifts to the church blue on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: white;
+}
+
+/* Specific hover tweak for a premium feel */
+.social-btn:active {
+    transform: scale(0.9);
+}
