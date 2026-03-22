@@ -8,7 +8,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body class="bg-[#F8F9FA] text-[#1F2937] selection:bg-[#D4AF37] selection:text-white">
 
@@ -89,22 +89,22 @@
         </div>
     </div>
 </div>
-                <div class="belief-card p-8 bg-[#F8F9FA] rounded-3xl border border-blue-50">
+                <div class="belief-card p-8 bg-[#F8F9FA] rounded-3xl border border-blue-50" data-aos="fade-up" data-aos-delay="100">
                     <span class="text-[#D4AF37]/20 text-3xl serif italic mb-4 block">01</span>
                     <h3 class="text-lg font-bold mb-3">Spiritual Purity</h3>
                     <p class="text-xs text-gray-500 leading-relaxed font-light">We believe in the sanctification of the soul and body through prayer and spiritual discipline.</p>
                 </div>
-                <div class="belief-card p-8 bg-[#F8F9FA] rounded-3xl border border-blue-50">
+                <div class="belief-card p-8 bg-[#F8F9FA] rounded-3xl border border-blue-50" data-aos="fade-up" data-aos-delay="200">
                     <span class="text-[#D4AF37]/20 text-3xl serif italic mb-4 block">02</span>
                     <h3 class="text-lg font-bold mb-3">Divine Healing</h3>
                     <p class="text-xs text-gray-500 leading-relaxed font-light">The power of God is manifest in healing the sick and restoring hope to the broken.</p>
                 </div>
-                <div class="belief-card p-8 bg-[#F8F9FA] rounded-3xl border border-blue-50">
+                <div class="belief-card p-8 bg-[#F8F9FA] rounded-3xl border border-blue-50" data-aos="fade-up" data-aos-delay="300  ">
                     <span class="text-[#D4AF37]/20 text-3xl serif italic mb-4 block">03</span>
                     <h3 class="text-lg font-bold mb-3">Holy Spirit</h3>
                     <p class="text-xs text-gray-500 leading-relaxed font-light">Guided by the Holy Spirit, we walk in the path of righteousness and divine revelation.</p>
                 </div>
-                <div class="belief-card p-8 bg-[#F8F9FA] rounded-3xl border border-blue-50">
+                <div class="belief-card p-8 bg-[#F8F9FA] rounded-3xl border border-blue-50" data-aos="fade-up" data-aos-delay="400">
                     <span class="text-[#D4AF37]/20 text-3xl serif italic mb-4 block">04</span>
                     <h3 class="text-lg font-bold mb-3">Community</h3>
                     <p class="text-xs text-gray-500 leading-relaxed font-light">A family united in Christ, supporting one another in faith and love.</p>
@@ -250,7 +250,7 @@ document.getElementById("give-now-btn").addEventListener("click", function() {
 });
 </script>
             </div>
-            <div class="relative">
+            <div class="relative" data-aos="fade-left" data-aos-duration="1500">
                 <img src="OLUSO.jpeg" class="aspect-square rounded-[3rem] object-cover border-8 border-white shadow-2xl">
                 <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-[#D4AF37] rounded-full flex items-center justify-center text-white shadow-2xl animate-bounce">
                     <i data-lucide="heart" class="w-12 h-12"></i>
@@ -342,13 +342,21 @@ document.getElementById("give-now-btn").addEventListener("click", function() {
         </div>
         
         <div class="mt-12 pt-8 border-t border-white/5 text-center">
-             <p class="text-[8px] text-blue-200/20 uppercase tracking-[0.5em] font-bold">The Glory of God manifested through worship</p>
+             <p data-aos="fade-up" data-aos-delay="200" class="text-[8px] text-blue-200/20 uppercase tracking-[0.5em] font-bold">The Glory of God manifested through worship</p>
         </div>
     </div>
 </footer>
 
     <script src="script.js"></script>
     <script>lucide.createIcons();</script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // Animation speed (1 second)
+    once: true,     // Whether animation should happen only once - while scrolling down
+    offset: 100     // How many pixels from the bottom before the element "triggers"
+  });
+</script>
     
 </body>
 </html>
